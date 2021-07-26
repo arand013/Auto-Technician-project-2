@@ -12,8 +12,10 @@
   <div class="wrapper">
     <header>
       <h1>
-        <a href="/">Just Tech News</a>
+
+        <a href="/">New Gen Mechanics</a>
       </h1>
+
       <nav>
         {{#if loggedIn}}
         <a href="/dashboard">dashboard</a>
@@ -22,6 +24,8 @@
         <a href="/login">login</a>
         {{/if}}
       </nav>
+
+
     </header>
     <main>
       {{{ body }}}
@@ -30,10 +34,12 @@
       Thanks for visiting!
     </footer>
   </div>
+
   
-  {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
+{{#if loggedIn}}
+ // <script src="/javascript/logout.js"></script>
   {{/if}}
+
 </body>
 
 </html>
