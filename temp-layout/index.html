@@ -8,7 +8,8 @@
     <link href="https://unpkg.com/tailwindcss@1.4.6/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
+<!-- <body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;"> -->
+  <body class="flex flex-col items-center justify-center" style="background: white;"></body>
 	<style>
     header {
     background: url('./assets/images/pexels-malte-luk-2244746.jpg');
@@ -47,10 +48,10 @@
 
 		<!-- Nav Items Working on Tablet & Bigger Sceen -->
 		<div class="p-4 hidden md:flex flex-row justify-between font-bold">
-			<a id="hide-after-click" href="#about" class="mx-4 text-lg  border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Home</a>
-			<a href="#whyus" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">About Us</a>
-			<a href="#showcase" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Contact Us</a>
-      <a href="#showcase" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Login</a>
+			<a id="hide-after-click" href="#home" class="mx-4 text-lg  border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Home</a>
+			<a href="#aboutus" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">About Us</a>
+			<a href="#contactus" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Contact Us</a>
+      <a href="./loginform.html" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Login</a>
 		</div>
 
 		<!-- Burger Nav Button on Mobile -->
@@ -70,7 +71,7 @@
 			<a href="#home" class="p-2 font-semibold hover:text-indigo-700">Home</a>
 			<a href="#aboutus" class="p-2 font-semibold hover:text-indigo-700">About Us</a>
 			<a href="#contactus" class="p-2 font-semibold hover:text-indigo-700">Contact Us</a>
-      <a href="#contactus" class="p-2 font-semibold hover:text-indigo-700">Login</a>
+      <a href="./loginform.html" class="p-2 font-semibold hover:text-indigo-700">Login</a>
 		</div>
 	</div>
 
@@ -85,24 +86,47 @@
             Sign up <span class="text-white">today</span> to <span class="text-white">request</span> to speak with our technicians
            </h2>
            <div class="inline-flex">
-           <button class="p-2 my-5 mx-2 bg-indigo-700 hover:bg-indigo-800 font-bold text-white rounded border-2 border-transparent hover:border-indigo-800 shadow-md transition duration-500 md:text-xl">Sign Up</button>
+           <button class="p-2 my-5 mx-2 bg-indigo-700 hover:bg-indigo-800 font-bold text-white rounded border-2 border-transparent hover:border-indigo-800 shadow-md transition duration-500 md:text-xl"><a href="./signupform.html">Sign Up</a></button>
            </div>
         </div>
     </div>
   </header>
 
+  <!--About Us Start-->
   <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
     <div class="flex flex-wrap text-center justify-center">
       <div class="w-full lg:w-6/12 px-4">
-        <h2 class="text-4xl font-semibold text-white">Build something</h2>
-        <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+        <h2 class="text-4xl font-semibold text-gray-800">About Us</h2>
+        <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-600">
           Put the potentially record low maximum sea ice extent tihs year
           down to low ice. According to the National Oceanic and
           Atmospheric Administration, Ted, Scambos.
         </p>
       </div>
     </div>
-    
+
+  <!--separation border-->
+  <div class="container mx-auto sm:px-4">
+      <hr class="bg-gray-400">
+  </div>
+  
+  <!--Start icon steps-->
+  <section class="container mx-auto px-5 py-12 lg:py-28 ">
+    <div class="grid xl:grid-cols-3 gap-10">
+        <div class="">
+            <h2 class="text-2xl md:text-3xl font-semibold">What To Do</h2>
+        </div>
+        <div class="xl:col-span-2 grid gap-y-8 sm:gap-10 sm:grid-cols-2">
+            <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500 text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                      </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold">Sign Up</h3>
+                </div>
+
 
 </body>
 </html>
