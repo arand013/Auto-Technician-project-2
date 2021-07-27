@@ -7,5 +7,6 @@ const dashboardRoutes = require('./dashboard-routes.js');
 router.use('/', homeRoutes);
 router.use('/dashboard', dashboardRoutes);
 router.use('/api', apiRoutes);
+// add admin route 
 
 module.exports = router;
