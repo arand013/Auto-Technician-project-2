@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post} = require('../../models');
+const { User, Post } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
@@ -22,14 +22,12 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ['id', 'title', 'post_url', 'created_at']
+        attributes: ['name:', 'email', 'phone_number', 'make', 'mode', 'year', 'city', 'description', 'id']
       },
-      
+
       {
         model: Post,
-        attributes: ['title'],
-        through: Vote,
-        as: 'voted_posts'
+        attributes: ['name'],
       }
     ]
   })
@@ -70,7 +68,7 @@ router.post('/login', (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
-  
+
       res.json({ user: dbUserData, message: 'You are now logged in!' });
     });
   });
