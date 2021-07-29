@@ -13,9 +13,15 @@ class User extends Model {
 // create fields/columns for User model
 User.init(
   {
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false
+    id: {
+      // use the special Sequelize DataTypes object provide what type of data it is
+      type: DataTypes.INTEGER,
+      // this is the equivalent of SQL's `NOT NULL` option
+      allowNull: false,
+      // instruct that this is the Primary Key
+      primaryKey: true,
+      // turn on auto increment
+      autoIncrement: true
     },
     email: {
       type: DataTypes.STRING,
@@ -30,6 +36,7 @@ User.init(
       allowNull: false,
       validate: {
         len: [4]
+
       }
     }
   },
