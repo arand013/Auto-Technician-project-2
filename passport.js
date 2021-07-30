@@ -7,7 +7,7 @@ function initialize(passport, getUserByEmail) {
         if (user == null) {
             return done(null, false, { message: 'No user with that email'})
         }
-        
+
         try {
             if (await bycrypt.compare(password, user.password)) {
                 return done(null, user)
@@ -18,11 +18,11 @@ function initialize(passport, getUserByEmail) {
             return done(e)
         }
     }
-
+ 
     passport.use(new LocalStrategy({ usernameField: 'email'}), 
     authenticateUser)
     passport.serializeUser((user, done) => {  })
     passport.deserializeUser((id, done) => { })
 }
-
+ 
 module.exports = initialize
