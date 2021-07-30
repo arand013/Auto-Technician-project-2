@@ -1,21 +1,30 @@
 {
-  "name": "auto-tech",
+  "name": "hacker-news-clone",
   "version": "1.0.0",
-  "description": "car trouble",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "seeds": "node seeds/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/arand013:auto-technician-project-2"
-  },
-  "author": "jun,cindy,alex",
+  "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^4.0.1",
+    "connect-session-sequelize": "^6.1.1",
     "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-handlebars": "^5.3.2",
-    "express-session": "^1.17.2"
+    "express-flash": "0.0.2",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.2",
+    "handlebars": "^4.7.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "passport": "^0.4.1",
+    "sequelize": "^5.21.5"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
   }
 }
