@@ -9,14 +9,13 @@ router.get('/', (req, res) => {
   Post.findAll({
     attributes: [
       'name:', 'email', 'phone_number', 'make', 'mode', 'year', 'city', 'description', 'id',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
       {
-        model: Comment,
+        model: User,
         attributes: ['name:', 'email', 'phone_number', 'make', 'mode', 'year', 'city', 'description', 'id'],
         include: {
-          model: Post,
+          model: User,
           attributes: ['name']
         }
       },
@@ -39,16 +38,14 @@ router.get('/:id', (req, res) => {
       id: req.params.id
     },
     attributes: [
-      'id',
-      'post_url',
-      'title',
-      'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+      'name:', 'email', 'phone_number', 'make', 'mode', 'year', 'city', 'description', 'id',
     ],
     include: [
       {
-        model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        model: Post,
+        attributes: [
+          'name:', 'email', 'phone_number', 'make', 'mode', 'year', 'city', 'description', 'id',
+        ],
         include: {
           model: User,
           attributes: ['username']
@@ -81,16 +78,6 @@ router.post('/', withAuth, (req, res) => {
     user_id: req.session.user_id
   })
     .then(dbPostData => res.json(dbPostData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
-
-router.put('/upvote', withAuth, (req, res) => {
-  // custom static method created in models/Post.js
-  Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
-    .then(updatedVoteData => res.json(updatedVoteData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);

@@ -3,7 +3,6 @@ const { User, Post } = require('../models');
 
 const userdata = [
   {
-
     username: 'NewGenM',
     email: 'NewGenM@ymail.com',
     password: 'Mechanic#1'

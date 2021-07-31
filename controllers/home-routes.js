@@ -5,6 +5,7 @@ const sequelize = require('../config/connection');
 // Defines Login 
 
 router.get('/', (req, res) => {
+
   res.render('homepage', {
     id: 1,
     user: {
