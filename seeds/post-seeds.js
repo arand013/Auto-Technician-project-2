@@ -2,6 +2,7 @@ const { Post } = require('../models');
 
 const postdata = [
   {
+    id: 1,
     name: 'Donec ipsum.',
     email: 'larnout5@imdb.com',
     phone_number: '909-111-2222',
@@ -10,9 +11,10 @@ const postdata = [
     year: '2009',
     city: 'Rialto',
     description: 'Battery',
-    user_id: 1
+
   },
   {
+    id: 2,
     name: 'Isaac Abrams.',
     email: 'larnout5@imdb.com',
     phone_number: '909-111-2222',
@@ -21,9 +23,10 @@ const postdata = [
     year: '2021',
     city: 'Upland',
     description: 'Car overheats',
-    user_id: 2
+
   },
   {
+    id: 3,
     name: 'Faith Kate',
     email: 'fkate@cyper.com',
     phone_number: '909-111-2222',
@@ -32,9 +35,10 @@ const postdata = [
     year: '2002',
     city: 'Fontana',
     description: 'Car overheats',
-    user_id: 3
+
   },
   {
+    id: 4,
     name: 'Davion Money',
     email: 'dmoney@secure.org',
     phone_number: '909-111-2222',
@@ -43,7 +47,6 @@ const postdata = [
     year: '2007',
     city: 'LA',
     description: 'Car overheats',
-    user_id: 4
 
   },
 ];

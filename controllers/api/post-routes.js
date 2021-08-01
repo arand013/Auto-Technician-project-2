@@ -8,22 +8,9 @@ router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
     attributes: [
-      'name:', 'email', 'phone_number', 'make', 'mode', 'year', 'city', 'description', 'id',
+      'id', 'name', 'email', 'phone_number', 'make', 'model', 'year', 'city', 'description',
     ],
-    include: [
-      {
-        model: User,
-        attributes: ['name:', 'email', 'phone_number', 'make', 'mode', 'year', 'city', 'description', 'id'],
-        include: {
-          model: User,
-          attributes: ['name']
-        }
-      },
-      {
-        model: Post,
-        attributes: ['name']
-      }
-    ]
+
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -38,24 +25,9 @@ router.get('/:id', (req, res) => {
       id: req.params.id
     },
     attributes: [
-      'name:', 'email', 'phone_number', 'make', 'mode', 'year', 'city', 'description', 'id',
+      'id', 'name', 'email', 'phone_number', 'make', 'model', 'year', 'city', 'description'
     ],
-    include: [
-      {
-        model: Post,
-        attributes: [
-          'name:', 'email', 'phone_number', 'make', 'mode', 'year', 'city', 'description', 'id',
-        ],
-        include: {
-          model: User,
-          attributes: ['username']
-        }
-      },
-      {
-        model: User,
-        attributes: ['username']
-      }
-    ]
+
   })
     .then(dbPostData => {
       if (!dbPostData) {
@@ -73,35 +45,11 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuth, (req, res) => {
   // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
-    title: req.body.title,
-    post_url: req.body.post_url,
-    user_id: req.session.user_id
+    name: req.body.name,
+    email: req.body.email,
+    description: req.session.description
   })
     .then(dbPostData => res.json(dbPostData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
-
-router.put('/:id', withAuth, (req, res) => {
-  Post.update(
-    {
-      title: req.body.title
-    },
-    {
-      where: {
-        id: req.params.id
-      }
-    }
-  )
-    .then(dbPostData => {
-      if (!dbPostData) {
-        res.status(404).json({ message: 'No post found with this id' });
-        return;
-      }
-      res.json(dbPostData);
-    })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
