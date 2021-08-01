@@ -96,13 +96,10 @@
   <div class="flex flex-wrap text-center justify-center">
     <div class="w-full lg:w-6/12 px-4">
       <h2 class="text-4xl font-semibold text-gray-800">About Us</h2>
-      <p class="text-lg leading-relaxed mt-8 mb-8 text-gray-600">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+      <p class="text-2xl leading-relaxed mt-8 mb-8 text-gray-600">
+        Welcome to New Gen. Mechanics where we specify in scanning vehicles. Do you have Check engine lights or service lights on. Is your car not working properly. Well, we’re here to provide more information on what’s happening. 
+        <br><br><br>
+        Better yet: A website that connects people with car troubles to find a technician to discover the source of the problem.
       </p>
     </div>
   </div>
@@ -133,7 +130,7 @@
                 d="M104.84,1.62,121.25,18a5.58,5.58,0,0,1,0,7.88L112.17,35l-24.3-24.3L97,1.62a5.6,5.6,0,0,1,7.88,0ZM31.26,3.43h36.3L51.12,19.87H31.26A14.75,14.75,0,0,0,20.8,24.2l0,0a14.75,14.75,0,0,0-4.33,10.46v68.07H84.5A14.78,14.78,0,0,0,95,98.43l0,0a14.78,14.78,0,0,0,4.33-10.47V75.29l16.44-16.44V87.93A31.22,31.22,0,0,1,106.59,110l0,.05a31.2,31.2,0,0,1-22,9.15h-72a12.5,12.5,0,0,1-8.83-3.67l0,0A12.51,12.51,0,0,1,0,106.65v-72a31.15,31.15,0,0,1,9.18-22l.05-.05a31.17,31.17,0,0,1,22-9.16ZM72.33,74.8,52.6,80.9c-13.85,3-13.73,6.15-11.16-6.91l6.64-23.44h0l0,0L83.27,15.31l24.3,24.3L72.35,74.83l0,0ZM52.22,54.7l16,16-13,4c-10.15,3.13-10.1,5.22-7.34-4.55l4.34-15.4Z" />
             </svg>
           </div>
-          <h3 class="text-6xl font-semibold">Sign Up</h3>
+          <h3 class="text-6xl font-semibold">Request</h3>
         </div>
       </div>
       <div class="space-y-5 flex items-center justify-center">
@@ -199,14 +196,10 @@
         <br>
         <h2 class="text-5xl font-semibold text-white">Contact Us</h2>
         <br><br>
-        <div class="inline-flex">
-          <button
-            class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full">&nbsp;&nbsp;Email&nbsp;&nbsp;</button>
-        </div>
-        &nbsp;&nbsp;
-        <div class="inline-flex">
-          <button
-            class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full">&nbsp;Phone&nbsp;</button>
+        <body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
+        <div>
+          <a class='bg-transparent border border-gray-500 py-2 px-5 text-white rounded modal-open' data-toggle="modal" data-target="firstModal">Email</a>
+          <a class='bg-transparent border border-gray-500 py-2 px-5 text-white rounded modal-open' data-toggle="modal" data-target="secondModal">Phone</a>
         </div>
         <br><br><br><br>
       </div>
@@ -215,78 +208,100 @@
   <!--Contact us End-->
 
   <!--Modal-->
-  <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-cente∂r justify-center">
-    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
-
-    <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
-
-      <div
-        class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
-        <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-          viewBox="0 0 18 18">
-          <path
-            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
-          </path>
-        </svg>
-        <span class="text-sm">(Esc)</span>
-      </div>
-
-      <!-- Add margin if you want to see some of the overlay behind the modal-->
-      <div class="modal-content py-4 text-left px-6">
-        <!--Title-->
-        <div class="flex justify-between items-center pb-3">
-          <p class="text-2xl font-bold">Contact Us Now!</p>
-          <div class="modal-close cursor-pointer z-50">
-            <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-              viewBox="0 0 18 18">
-              <path
-                d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
-              </path>
-            </svg>
-          </div>
-        </div>
-
-        <!--Body-->
-        <p>support@newgenmachanices.com</p>
-      </div>
-    </div>
+<div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center" id="firstModal">
+  <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+  
+  <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+  
+  <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+      <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+      </svg>
+      <span class="text-sm">(Esc)</span>
   </div>
 
+  <!-- Add margin if you want to see some of the overlay behind the modal-->
+  <div class="modal-content py-4 text-left px-6">
+      <!--Title-->
+      <div class="flex justify-between items-center pb-3">
+      <p class="text-2xl font-bold">support@newgenmechanics.com</p>
+      <div class="modal-close cursor-pointer z-50">
+          <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+          <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+          </svg>
+      </div>
+      </div>
+  </div>
+  </div>
+</div>
+
+<div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center" id="secondModal">
+  <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+  
+  <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+  
+  <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+      <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+      </svg>
+      <span class="text-sm">(Esc)</span>
+  </div>
+
+  <!-- Add margin if you want to see some of the overlay behind the modal-->
+  <div class="modal-content py-4 text-left px-6">
+      <!--Title-->
+      <div class="flex justify-between items-center pb-3">
+          <p class="text-2xl font-bold">123-456-7890</p>
+          <div class="modal-close cursor-pointer z-50">
+              <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+              <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+              </svg>
+          </div>
+          </div>
+      </div>
+  </div>
+</div>
+
   <script>
-    var openmodal = document.querySelectorAll('.modal-open')
-    for (var i = 0; i < openmodal.length; i++) {
-      openmodal[i].addEventListener('click', function (event) {
-        event.preventDefault()
-        toggleModal()
-      })
-    }
+ var openmodal = document.querySelectorAll('.modal-open')
+ let selectedModalTargetId = ''
+ for (var i = 0; i < openmodal.length; i++) {
+   openmodal[i].addEventListener('click', function(event){
+     selectedModalTargetId = event.target.attributes.getNamedItem('data-target').value
+     event.preventDefault()
+     toggleModal()
+   })
+ }
 
-    const overlay = document.querySelector('.modal-overlay')
-    overlay.addEventListener('click', toggleModal)
+const overlay = document.querySelector('.modal-overlay')
+overlay.addEventListener('click', toggleModal)
 
-    var closemodal = document.querySelectorAll('.modal-close')
-    for (var i = 0; i < closemodal.length; i++) {
-      closemodal[i].addEventListener('click', toggleModal)
-    }
+var closemodal = document.querySelectorAll('.modal-close')
+for (var i = 0; i < closemodal.length; i++) {
+  closemodal[i].addEventListener('click', toggleModal)
+}
 
-    document.onkeydown = function (evt) {
-      evt = evt || window.event
-      var isEscape = false
-      if ("key" in evt) {
-        isEscape = (evt.key === "Escape" || evt.key === "Esc")
-      } else {
-        isEscape = (evt.keyCode === 27)
-      }
-      if (isEscape && document.body.classList.contains('modal-active')) {
-        toggleModal()
-      }
-    };
+document.onkeydown = function(evt) {
+  evt = evt || window.event
+  var isEscape = false
+  if ("key" in evt) {
+    isEscape = (evt.key === "Escape" || evt.key === "Esc")
+  } else {
+    isEscape = (evt.keyCode === 27)
+  }
+  if (isEscape && document.body.classList.contains('modal-active')) {
+    toggleModal()
+  }
+}
 
-    function toggleModal() {
-      const body = document.querySelector('body')
-      const modal = document.querySelector('.modal')
-      modal.classList.toggle('opacity-0')
-      modal.classList.toggle('pointer-events-none')
-      body.classList.toggle('modal-active')
-    }
-  </script>
+function toggleModal () {
+  if(!selectedModalTargetId) {
+    return
+  }
+  const body = document.querySelector('body')
+  const modal = document.getElementById(selectedModalTargetId)
+  modal.classList.toggle('opacity-0')
+  modal.classList.toggle('pointer-events-none')
+  body.classList.toggle('modal-active')
+}
+</script>
