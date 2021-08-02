@@ -21,4 +21,4 @@
 * Readme: Jun,
 
 # Links
-# https://new-gen-mechanics.herokuapp.com/
+Heroku: https://new-gen-mechanics.herokuapp.com/
