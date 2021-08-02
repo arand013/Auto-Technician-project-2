@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 {{#if posts.length}}
 <section>
@@ -14,3 +15,31 @@
 {{/if}}
 
 <script src="/javascript/add-post.js"></script>
+=======
+<section>
+  <h2>View Users</h2>   
+    <div id="users"></div>
+
+<!-- The script element is used to define the Handlebars template -->
+<script type="text/x-handlebars-template" id="tableTemplate">
+<table>
+<thead>
+  <tr>
+    {{#each array.[0]}}
+      <th>{{@key}}</th>
+    {{/each}}
+  </tr>
+</thead>
+<tbody>
+  {{#each array}}
+    <tr>
+    	{{#each this}}
+        <td>{{this}}</td>
+      {{/each}}
+    </tr>
+  {{/each}}
+</tbody>
+</table>
+</script>
+</section>
+>>>>>>> feature/views

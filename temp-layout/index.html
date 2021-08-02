@@ -43,6 +43,7 @@
   }
 </style>
 
+<<<<<<< HEAD
 <nav id="nav" class="fixed inset-x-0 top-0 flex flex-row justify-between z-10 text-white bg-transparent">
   <div class="p-4">
     <div class="font-extrabold tracking-widest text-xl"><a href="#"
@@ -127,6 +128,74 @@
     </div>
   </div>
   <!--About Us End-->
+=======
+	<nav id="nav" class="fixed inset-x-0 top-0 flex flex-row justify-between z-10 text-white bg-transparent">
+		<div class="p-4">
+			<div class="font-extrabold tracking-widest text-xl"><a href="#" class="transition duration-500 hover:text-indigo-500">NewGenMachanics</a></div>
+		</div>
+
+		<!-- Nav bar for desktops and big screens -->
+		<div class="p-4 hidden md:flex flex-row justify-between font-bold">
+			<a id="hide-after-click" href="#home" class="mx-4 text-lg  border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Home</a>
+			<a href="#aboutus" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">About Us</a>
+			<a href="#contactus" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Contact Us</a>
+      <a href="./loginform.html" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Login</a>
+		</div>
+
+		<!-- Burger Nav Button on Mobile -->
+		<div id="nav-open" class="p-4 md:hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+			 stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+				<line x1="3" y1="12" x2="21" y2="12"></line>
+				<line x1="3" y1="6" x2="21" y2="6"></line>
+				<line x1="3" y1="18" x2="21" y2="18"></line>
+			</svg>
+		</div>
+	</nav>
+
+	<!-- Open Nav in Mobile -->
+	<div id="nav-opened" class="fixed left-0 right-0 hidden bg-white mx-2 mt-16 rounded-br rounded-bl shadow z-10">
+		<div class="p-2 divide-y divide-gray-600 flex flex-col">
+			<a href="#home" class="p-2 font-semibold hover:text-indigo-700">Home</a>
+			<a href="#aboutus" class="p-2 font-semibold hover:text-indigo-700">About Us</a>
+			<a href="#contactus" class="p-2 font-semibold hover:text-indigo-700">Contact Us</a>
+      <a href="./loginform.html" class="p-2 font-semibold hover:text-indigo-700">Login</a>
+		</div>
+	</div>
+
+  <!-- hero background -->
+	<header id="up" class="bg-center bg-fixed bg-no-repeat bg-center bg-cover h-screen relative">
+		<div class="h-screen bg-opacity-50 bg-black flex items-center justify-center" style="background:rgba(0,0,0,0.5);">
+			<div class="mx-2 text-center">
+				<h1 class="text-gray-100 font-extrabold text-4xl xs:text-5xl md:text-6xl">
+					<span class="text-white">Consult with</span> a professional
+           </h1>
+           <h2 class="text-gray-200 font-extrabold text-2xl xs:text-3xl md:text-4xl leading-tight">
+            Sign up <span class="text-white">today</span> to <span class="text-white">request</span> to speak with our technicians
+           </h2>
+           <div class="inline-flex">
+           <button class="p-2 my-5 mx-2 bg-indigo-700 hover:bg-indigo-800 font-bold text-white rounded border-2 border-transparent hover:border-indigo-800 shadow-md transition duration-500 md:text-xl"><a href="./signupform.html">Request</a></button>
+           </div>
+        </div>
+    </div>
+  </header>
+  <!-- hero background End -->
+
+  <!--About Us Start-->
+  <section id="aboutus">
+  <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
+    <div class="flex flex-wrap text-center justify-center">
+      <div class="w-full lg:w-6/12 px-4">
+        <h2 class="text-4xl font-semibold text-gray-800">About Us</h2>
+        <p class="text-2xl leading-relaxed mt-8 mb-8 text-gray-600">
+          Welcome to New Gen. Mechanics where we specify in scanning vehicles. Do you have Check engine lights or service lights on. Is your car not working properly. Well, we’re here to provide more information on what’s happening. 
+          <br><br><br>
+          Better yet: A website that connects people with car troubles to find a technician to discover the source of the problem.
+      </div>
+    </div>
+  </section>
+    <!--About Us End-->
+>>>>>>> feature/views
 
   <!--separation border-->
   <div class="container my-12 sm:px-4">
@@ -212,6 +281,7 @@
   </section>
   <!-- End icon steps -->
 
+<<<<<<< HEAD
   <!--Contact Us Start-->
   <div class="container my-20 px-4 lg:pt-10 lg:pb-63 bg-gray-800 h-auto">
     <div class="flex flex-wrap text-center justify-center">
@@ -227,11 +297,24 @@
         <div class="inline-flex">
           <button
             class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full">&nbsp;Phone&nbsp;</button>
+=======
+ <!--Contact Us Start-->
+<div class="container my-20 px-4 lg:pt-10 lg:pb-63 bg-gray-800 h-auto">
+  <div class="flex flex-wrap text-center justify-center">
+    <div class="w-full lg:w-6/12 px-4 h-auto">
+      <br>
+      <h2 class="text-5xl font-semibold text-white">Contact Us</h2>
+      <br><br>
+      <body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
+        <div>
+      <a class='bg-transparent border border-gray-500 py-2 px-5 text-white rounded modal-open' data-toggle="modal" data-target="firstModal">Email</a>
+      <a class='bg-transparent border border-gray-500 py-2 px-5 text-white rounded modal-open' data-toggle="modal" data-target="secondModal">Phone</a>
+>>>>>>> feature/views
         </div>
-        <br><br><br><br>
-      </div>
+      <br><br><br><br>
     </div>
   </div>
+<<<<<<< HEAD
   <!--Contact us End-->
 
   <!--Modal-->
@@ -249,14 +332,58 @@
           </path>
         </svg>
         <span class="text-sm">(Esc)</span>
-      </div>
+=======
+</div>
+<!--Contact us End-->
 
-      <!-- Add margin if you want to see some of the overlay behind the modal-->
-      <div class="modal-content py-4 text-left px-6">
-        <!--Title-->
-        <div class="flex justify-between items-center pb-3">
-          <p class="text-2xl font-bold">Contact Us Now!</p>
+<!--Modal-->
+<div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center" id="firstModal">
+  <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+  
+  <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+  
+  <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+      <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+      </svg>
+      <span class="text-sm">(Esc)</span>
+  </div>
+
+  <!-- Add margin if you want to see some of the overlay behind the modal-->
+  <div class="modal-content py-4 text-left px-6">
+      <!--Title-->
+      <div class="flex justify-between items-center pb-3">
+      <p class="text-2xl font-bold">support@newgenmechanics.com</p>
+      <div class="modal-close cursor-pointer z-50">
+          <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+          <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+          </svg>
+      </div>
+>>>>>>> feature/views
+      </div>
+  </div>
+  </div>
+</div>
+
+<div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center" id="secondModal">
+  <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+  
+  <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+  
+  <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+      <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+      </svg>
+      <span class="text-sm">(Esc)</span>
+  </div>
+
+  <!-- Add margin if you want to see some of the overlay behind the modal-->
+  <div class="modal-content py-4 text-left px-6">
+      <!--Title-->
+      <div class="flex justify-between items-center pb-3">
+          <p class="text-2xl font-bold">123-456-7890</p>
           <div class="modal-close cursor-pointer z-50">
+<<<<<<< HEAD
             <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
               viewBox="0 0 18 18">
               <path
@@ -268,10 +395,18 @@
 
         <!--Body-->
         <p>support@newgenmachanices.com</p>
+=======
+              <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+              <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+              </svg>
+          </div>
+          </div>
+>>>>>>> feature/views
       </div>
-    </div>
   </div>
+</div>
 
+<<<<<<< HEAD
   <script>
     var openmodal = document.querySelectorAll('.modal-open')
     for (var i = 0; i < openmodal.length; i++) {
@@ -311,6 +446,51 @@
       body.classList.toggle('modal-active')
     }
   </script>
+=======
+<script>
+ var openmodal = document.querySelectorAll('.modal-open')
+ let selectedModalTargetId = ''
+ for (var i = 0; i < openmodal.length; i++) {
+   openmodal[i].addEventListener('click', function(event){
+     selectedModalTargetId = event.target.attributes.getNamedItem('data-target').value
+     event.preventDefault()
+     toggleModal()
+   })
+ }
+
+const overlay = document.querySelector('.modal-overlay')
+overlay.addEventListener('click', toggleModal)
+
+var closemodal = document.querySelectorAll('.modal-close')
+for (var i = 0; i < closemodal.length; i++) {
+  closemodal[i].addEventListener('click', toggleModal)
+}
+
+document.onkeydown = function(evt) {
+  evt = evt || window.event
+  var isEscape = false
+  if ("key" in evt) {
+    isEscape = (evt.key === "Escape" || evt.key === "Esc")
+  } else {
+    isEscape = (evt.keyCode === 27)
+  }
+  if (isEscape && document.body.classList.contains('modal-active')) {
+    toggleModal()
+  }
+}
+
+function toggleModal () {
+  if(!selectedModalTargetId) {
+    return
+  }
+  const body = document.querySelector('body')
+  const modal = document.getElementById(selectedModalTargetId)
+  modal.classList.toggle('opacity-0')
+  modal.classList.toggle('pointer-events-none')
+  body.classList.toggle('modal-active')
+}
+</script>
+>>>>>>> feature/views
 
   </body>
 
