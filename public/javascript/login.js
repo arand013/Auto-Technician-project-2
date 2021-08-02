@@ -1,33 +1,4 @@
-//SIGN UP and LOGIN FUNCTIONS HERE
-
-//SIGN UP
-async function signupFormHandler(event) {
-  event.preventDefault();
-
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
-
-  if (username && email && password) {
-    const response = await fetch('/api/users', {
-      method: 'post',
-      body: JSON.stringify({
-        username,
-        email,
-        password
-      }),
-      headers: { 'Content-Type': 'application/json' }
-    });
-
-    //Checks the response status 
-    if (response.ok) {
-      console.log('Success!');
-    } else {
-      alert(response.statusText);
-    }
-  }
-}
-
-document.querySelector("#signUp-btn").addEventListener('click', signupFormHandler);
+//LOGIN FUNCTIONS HERE
 
 //LOGIN 
 async function loginFormHandler(event) {
@@ -48,7 +19,7 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/dashboard');
     } else {
       alert(response.statusText);
     }

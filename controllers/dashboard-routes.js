@@ -1,27 +1,26 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User} = require('../models');
+const { Post } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all request(POSTS) for dashboard
 router.get('/', withAuth, (req, res) => {
-  console.log(req.session);
-  console.log('======================');
+
   Post.findAll({
-    where: {
-      user_id: req.session.user_id
-    },
     attributes: [
-      'id',
-      'post_url',
-      'title',
-      'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+      'id', 'name', 'email', 'phone_number', 'make', 'model', 'year', 'city', 'description'
     ],
+
   })
     .then(dbPostData => {
-      const posts = dbPostData.map(post => post.get({ plain: true }));
-      res.render('dashboard', { posts, loggedIn: true });
+      const posts = dbPostData.map(post => post.get({
+        plain: true
+      }));
+
+      res.render('dashboard', {
+        posts,
+        loggedIn: req.session.loggedIn
+      });
     })
     .catch(err => {
       console.log(err);
@@ -31,30 +30,32 @@ router.get('/', withAuth, (req, res) => {
 
 router.get('/edit/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
-    attributes: [
-      'id',
-      'post_url',
-      'title',
-      'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+   attributes: [
+      'id', 'name', 'email', 'phone_number', 'make', 'model', 'year', 'city', 'description'
     ],
     
   })
-    .then(dbPostData => {
-      if (dbPostData) {
-        const post = dbPostData.get({ plain: true });
-        
-        res.render('edit-post', {
-          post,
-          loggedIn: true
+  .then(dbPostData => {
+    if (!dbPostData) {
+        res.status(404).json({
+            message: 'No post found with this id'
         });
-      } else {
-        res.status(404).end();
-      }
-    })
-    .catch(err => {
-      res.status(500).json(err);
+        return;
+    }
+
+    const post = dbPostData.get({
+        plain: true
     });
+
+    res.render('edit-post', {
+        post,
+        loggedIn: true
+    });
+})
+.catch(err => {
+    console.log(err);
+    res.status(500).json(err);
 });
+}); 
 
 module.exports = router;
