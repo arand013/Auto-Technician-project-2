@@ -6,7 +6,6 @@ module.exports = {
   },
   format_url: url => {
     return url
-
   },
   format_plural: (word, amount) => {
     if (amount !== 1) {
