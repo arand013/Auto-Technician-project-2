@@ -9,7 +9,6 @@
   <link href="https://unpkg.com/tailwindcss@1.4.6/dist/tailwind.min.css" rel="stylesheet">
   <link href="/stylesheets/1style.css" rel="stylesheet">
 
-
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
   <script>
@@ -27,38 +26,64 @@
       $(document.body).html(html);
     });
   </script>
-
-
 </head>
 
 <body>
-  <div class="wrapper"></div>
-  <header>
-    <nav>
-      {{#if loggedIn}}
-      <a href="/dashboard">dashboard</a>
-      <button id="logout" class="btn-no-style">logout</button>
-      {{else}}
-      <a href="/login">login</a>
-      {{/if}}
-    </nav>
-  </header>
-  <div class="site-row">
-    <div class="site-name">
-      <h1>NewGenMechanics</h1>
-    </div>
+  <div class="wrapper">
+    <style>
+      header {
+        background: url('./assets/images/pexels-malte-luk-2244746.jpg');
+        width: 100%;
+      }
 
+      @media only screen and (min-width:640px) {
+        header {
+          background: url('./assets/images/pexels-malte-luk-2244746.jpg');
+        }
+      }
+
+      @media only screen and (min-width:768px) {
+        header {
+          background: url('./assets/images/pexels-malte-luk-2244746.jpg');
+        }
+      }
+
+      @media only screen and (min-width:1024px) {
+        header {
+          background: url('./assets/images/pexels-malte-luk-2244746.jpg');
+        }
+      }
+
+      @media only screen and (min-width:1025px) {
+        header {
+          background: url('./assets/images/pexels-malte-luk-2244746.jpg');
+        }
+      }
+    </style>
+    <header>
+      <nav>
+        <div class="p-4 hidden md:flex flex-row justify-between font-bold">
+          <a href="/"
+            class="mx-4 text-lg  border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Home</a>
+          <a href="#aboutus"
+            class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">About
+            Us</a>
+          <a href="#contactus"
+            class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Contact
+            Us</a>
+          <a href="/login"
+            class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Login</a>
+        </div>
+
+      </nav>
 
   </div>
+  </header>
   <main>
     {{{ body }}}
   </main>
   </div>
 
-
-  {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
 
 </body>
 
