@@ -30,38 +30,12 @@
 
 <body>
   <div class="wrapper">
-    <style>
-      main {
-        background: url('./assets/images/pexels-malte-luk-2244746.jpg');
-        width: 100%;
-      }
 
-      @media only screen and (min-width:640px) {
-        main {
-          background: url('./assets/images/pexels-malte-luk-2244746.jpg');
-        }
-      }
-
-      @media only screen and (min-width:768px) {
-        main {
-          background: url('./assets/images/pexels-malte-luk-2244746.jpg');
-        }
-      }
-
-      @media only screen and (min-width:1024px) {
-        main {
-          background: url('./assets/images/pexels-malte-luk-2244746.jpg');
-        }
-      }
-
-      @media only screen and (min-width:1025px) {
-        main {
-          background: url('./assets/images/pexels-malte-luk-2244746.jpg');
-        }
-      }
-    </style>
     <header>
       <nav>
+        <h1>
+
+        </h1>
         <div class="p-4 hidden md:flex flex-row justify-between font-bold">
           <a href="/"
             class="mx-4 text-lg  border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Home</a>
@@ -71,8 +45,15 @@
           <a href="#contactus"
             class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Contact
             Us</a>
+        </div>
+        <div class="p-4 hidden md:flex flex-row justify-between font-bold">
+
+          <a href="/dashboard">Dashboard</a>
+          <button id="logout" class="btn-no-style logout">logout</button>
+
           <a href="/login"
             class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Login</a>
+
         </div>
 
       </nav>
@@ -84,6 +65,9 @@
     {{{ body }}}
   </main>
   </div>
+
+
+  <script src="/javascript/logout.js"></script>
 
 
 </body>

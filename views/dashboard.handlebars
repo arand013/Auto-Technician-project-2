@@ -1,9 +1,9 @@
-<section class="new-post-section">
+<div class="new-post-section">
     <button type="submit" class="btn" id="create-new-post">+ Create new post</button>
-</section>
+</div>
 
 {{#if posts.length}}
-<section>
+<div>
     <h2>Your Dashboard</h2>
     <ul class="post-list">
         {{#each posts as |post|}}
@@ -13,7 +13,7 @@
         </li>
         {{/each}}
     </ul>
-</section>
+</div>
 {{/if}}
 
 

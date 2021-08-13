@@ -15,16 +15,12 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   User.findOne({
-    attributes: { exclude: ['password'] },
+    attributes: {
+      exclude: ['password']
+    },
     where: {
       id: req.params.id
     },
-    include: [
-      {
-        model: Post,
-        attributes: ['name:', 'email', 'phone_number', 'make', 'mode', 'year', 'city', 'description', 'id']
-      },
-    ]
   })
     .then(dbUserData => {
       if (!dbUserData) {
@@ -32,6 +28,28 @@ router.get('/:id', (req, res) => {
         return;
       }
       res.json(dbUserData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+router.post('/', (req, res) => {
+  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+  User.create({
+
+    email: req.body.email,
+    password: req.body.password
+  })
+    .then(dbUserData => {
+      req.session.save(() => {
+        req.session.user_id = dbUserData.id;
+        req.session.email = dbUserData.email;
+        req.session.loggedIn = true;
+
+        res.json(dbUserData);
+      });
     })
     .catch(err => {
       console.log(err);
@@ -51,20 +69,20 @@ router.post('/login', (req, res) => {
       res.status(400).json({ message: 'No user with that email address!' });
       return;
     }
-
     const validPassword = dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res.status(400).json({ message: 'Incorrect password!' });
       return;
     }
-
     req.session.save(() => {
-      req.session.id = dbUserData.id;
-      req.session.name = dbUserData.name;
+      req.session.email = dbUserData.email;
       req.session.loggedIn = true;
 
-      res.json({ user: dbUserData, message: 'You are now logged in!' });
+      res.json({
+        user: dbUserData,
+        message: 'You are now logged in!'
+      });
     });
   });
 });
