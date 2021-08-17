@@ -3,12 +3,15 @@ const sequelize = require('../../config/connection');
 const { Post, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// get all users
+// get all Posts
 router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
     attributes: [
-      'id', 'name', 'email', 'phone_number', 'make', 'model', 'year', 'city', 'description',
+      "id", "name", "email", "phone_number", "make", "model", "year", "city", "description",
+    ],
+    order: [
+      ["created_at", "DESC"]
     ],
 
   })
@@ -42,12 +45,17 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
   // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
     name: req.body.name,
     email: req.body.email,
-    description: req.session.description
+    phone_number: req.body.phone_number,
+    make: req.body.make,
+    model: req.body.model,
+    year: req.body.year,
+    city: req.body.city,
+    description: req.body.description
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {

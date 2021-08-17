@@ -9,27 +9,22 @@ const sequelize = require('./config/connection');
 const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
 const hbs = exphbs.create({ helpers });
-const app = express();
-const passport = require('passport')
 
-const initalizePassport = require('./passport')
+
 const session = require('express-session');
-const { addHook } = require('./models/Post');
-const { User } = require('./models');
-const { use } = require('./controllers');
-const { userInfo } = require('os');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
 	secret: 'Key that will sign cookie',
 	cookie: {},
-	resave: true,
+	resave: false,
 	saveUninitialized: true,
 	store: new SequelizeStore({
 		db: sequelize
 	})
 };
 
+const app = express();
 const PORT = process.env.PORT || 3003;
 
 

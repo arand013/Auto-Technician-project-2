@@ -18,12 +18,10 @@ Post.init(
     },
     email: {
       type: DataTypes.STRING,
-      unique: true,
       allowNull: false
     },
     phone_number: {
       type: DataTypes.STRING,
-      unique: true,
       allowNull: false
     },
     make: {
