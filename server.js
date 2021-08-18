@@ -39,7 +39,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+module.exports.bcrypt = bcrypt;
 
 
 
