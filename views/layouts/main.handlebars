@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,35 +27,37 @@
       $(document.body).html(html);
     });
   </script>
+
 </head>
 
 <body>
   <div class="wrapper">
 
     <header>
-      <nav>
-        <h1>
 
-        </h1>
-        <div class="p-4 hidden md:flex flex-row justify-between font-bold">
-          <a href="/"
-            class="mx-4 text-lg  border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Home</a>
-          <a href="#aboutus"
-            class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">About
-            Us</a>
-          <a href="#contactus"
-            class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Contact
-            Us</a>
-        </div>
-        <div class="p-4 hidden md:flex flex-row justify-between font-bold">
+      <h1 class="p-4 hidden md:flex flex-row justify-between font-bold">
+        <a href="/"
+          class="mx-4 text-lg  border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Home</a>
+        <a href="#aboutus"
+          class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">About
+          Us</a>
+        <a href="#contactus"
+          class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Contact
+          Us</a>
 
-          <a href="/dashboard">Dashboard</a>
-          <button id="logout" class="btn-no-style logout">logout</button>
+      </h1>
+      <nav id="else-form" class="p-4 hidden md:flex flex-row justify-between font-bold">
+        {{#if loggedIn}}
+        <a href="/dashboard"
+          class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Dashboard</a>
+          
+        <button type="submit" id="logout" class="font-bold mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500
+            ">Logout</button>
+        {{else}}
+        <a href="/login"
+          class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Login</a>
+        {{/if}}
 
-          <a href="/login"
-            class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Login</a>
-
-        </div>
 
       </nav>
 
@@ -66,9 +69,9 @@
   </main>
   </div>
 
-
+  {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
-
+  {{/if}}
 
 </body>
 
