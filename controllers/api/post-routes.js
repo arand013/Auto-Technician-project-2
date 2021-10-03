@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
     attributes: [
-      "id", "name", "email", "phone_number", "make", "model", "year", "city", "description",
+      "id", "title", "email", "phone_number", "make", "city", "description",
     ],
     order: [
       ["created_at", "DESC"]
@@ -28,7 +28,7 @@ router.get('/:id', (req, res) => {
       id: req.params.id
     },
     attributes: [
-      'id', 'name', 'email', 'phone_number', 'make', 'model', 'year', 'city', 'description'
+      'id', 'title', 'email', 'phone_number', 'make', 'model', 'year', 'city', 'description'
     ],
 
   })
@@ -48,14 +48,12 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
-    name: req.body.name,
+    title: req.body.title,
     email: req.body.email,
-    phone_number: req.body.phone_number,
-    make: req.body.make,
-    model: req.body.model,
-    year: req.body.year,
+    phone_number: req.body.phone,
+    make: req.body.car,
     city: req.body.city,
-    description: req.body.description
+    description: req.body.post_content,
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
