@@ -28,5 +28,5 @@
 * Readme: Jun,
 
 # Links
-Live: https://www.newgenmechanics.com/
-Github: https://github.com/arand013/Auto-Technician-project-2/tree/feature/rebuild
+* Live: https://www.newgenmechanics.com/
+* Github: https://github.com/arand013/Auto-Technician-project-2/tree/feature/rebuild
