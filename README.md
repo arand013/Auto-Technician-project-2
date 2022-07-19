@@ -1,4 +1,4 @@
-# NewGenMechanic
+# NewGenMechanics
 
 # Collaborators:
 * Cindy Kim
