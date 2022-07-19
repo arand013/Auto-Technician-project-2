@@ -28,5 +28,5 @@
 * Readme: Jun,
 
 # Links
-Heroku: https://new-gen-mechanics.herokuapp.com/
-Github: 
+Live: https://www.newgenmechanics.com/
+Github: https://github.com/arand013/Auto-Technician-project-2/tree/feature/rebuild
